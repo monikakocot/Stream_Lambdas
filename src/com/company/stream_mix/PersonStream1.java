@@ -10,9 +10,11 @@ public class PersonStream1 {
 
     public static void main(String[] args) {
 
-        // Statyczny import
+        // Static import
         abs(5 - 20);
 
+//////////////////////////////////////////////////
+System.out.println("-------------------------");
         List<String> myList = Arrays.asList("Oskar", "Pitor", "Kondzio", "Kuba");
         myList
                 .stream()
@@ -22,20 +24,20 @@ public class PersonStream1 {
                 .findFirst()
                 .ifPresent(s -> System.out.println(s));
 
-
-        String obiekt = "AkademiaKodu jest fajna!";
+///////////////////////////////////////////////////
+System.out.println("-------------------------");
+        String obiekt = "Akademia Kodu is great!";
 
         Optional<String> myOptional = Optional.ofNullable(obiekt);
 
         if(myOptional.isPresent()){
-            System.out.println("Obiekt istnieje " + myOptional.get());
+            System.out.println("Object exists " + myOptional.get());
         }else {
-            System.out.println("Obiekt jest nullem!!");
+            System.out.println("Object is null !!");
         }
 
-
-        System.out.println("-------------------------");
-
+///////////////////////////////////////////////////
+System.out.println("-------------------------");
 
         List<String> myListInteger = Arrays.asList("a124", "b14214", "g123", "o137");
 
@@ -52,6 +54,8 @@ public class PersonStream1 {
                 .sum();
         System.out.println(values);
 
+///////////////////////////////////////////////////
+System.out.println("-------------------------");
 
         List<Person> personList = new ArrayList<>();
         personList.add(new Person("Oskar", 26));
@@ -62,7 +66,7 @@ public class PersonStream1 {
         String message = personList.stream()
                 .filter(person -> person.getAge() >= 18)
                 .map(person1 -> person1.getName())
-                .collect(Collectors.joining(" i ", "Powyzej 18 lat sa: ", " ."));
+                .collect(Collectors.joining(" i ", "More that 18 are: ", " ."));
 
         System.out.println(message);
 
@@ -70,14 +74,14 @@ public class PersonStream1 {
                 .stream()
                 .collect(Collectors.averagingInt(person -> person.getAge()));
 
-        System.out.println("Srednia wieku to: " + aver);
+        System.out.println("Average age is: " + aver);
 
         IntSummaryStatistics statistics  = personList
                 .stream()
                 .collect(Collectors.summarizingInt(person -> person.getAge()));
 
 
-        System.out.println("Statystki: " + statistics);
+        System.out.println("Statystics: " + statistics);
 
         List<Integer> converted =
                 personList
@@ -87,23 +91,26 @@ public class PersonStream1 {
 
         // System.out.println(converted);
 
-
+///////////////////////////////////////////////////
+System.out.println("-------------------------");
 
         List<Person> personList1 = new ArrayList<>();
-        personList1.add(new Person("Oskar", 26));
-        personList1.add(new Person("Oskar", 20));
-        personList1.add(new Person("Lukasz", 20));
-        personList1.add(new Person("Kuba", 14));
+        personList1.add(new Person("Paweł", 50));
+        personList1.add(new Person("Kuba", 42));
+        personList1.add(new Person("Paweł", 17));
+        personList1.add(new Person("Kuba", 8));
 
         Map<String, List<Person>> groupByAge = personList1
                 .stream()
                 .collect(Collectors.groupingBy(o -> o.getName()));
 
-        // BiConsumer
+// BiConsumer
+System.out.println("BiConsumer: ");
         groupByAge.forEach( (key, value) -> printList(value));
+///////////////////////////////////////////////////
+System.out.println("-------------------------");
 
         List<String> names = Arrays.asList("Katarzyna", "Oskar", "Magda", "Tomek", "Dominika", "Mateusz");
-
 
         names
                 .stream()

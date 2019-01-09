@@ -11,7 +11,6 @@ public class Person implements Comparable<Person>{
         this.name = name;
         this.surname = surname;
     }
-
     @Override
     public String toString() {
         return "Person{" +
@@ -20,7 +19,6 @@ public class Person implements Comparable<Person>{
                 ", surname='" + surname + '\'' +
                 '}';
     }
-
     @Override
     public int compareTo(Person o) {
         int compareSurname = surname.compareTo(o.surname);
@@ -32,5 +30,4 @@ public class Person implements Comparable<Person>{
             return compareSurname ;
         }
     }
-
 }

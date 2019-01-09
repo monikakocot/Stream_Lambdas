@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        // tworzę listę naszych zwierzatków
+        // list of the animals:
 
         List<Animal> animalList = new ArrayList<>();
 
@@ -16,7 +16,7 @@ public class Main {
         animalList.add(new Animal("Papuga", false, true, true));
         animalList.add(new Animal("Pies", false, false, false));
 
-        // ZAMIENIAMY NA LAMBDY
+        // By creating objects and with using additional interfaces that implements AnimalChecker:
         //AnimalChecker checkJump = new CheckJump();
         //AnimalChecker checkRun = new CheckRun();
         //AnimalChecker checkSpeak = new CheckSpeak();
@@ -25,7 +25,8 @@ public class Main {
         //checker(animalList,checkRun);
         //checker(animalList,checkSpeak);
 
-        // TU LAMBDAMI:
+        // WITH LAMBDA:
+        // Here we dont need intefaces CheckJump, CheckRun i CheckSpeak
 
         System.out.println("Can Jump:");
         checker(animalList,s-> s.isCanJump());
@@ -40,8 +41,5 @@ public class Main {
         for (Animal animal: animals){
             System.out.println(animal.getName() + " : " + animalChecker.checkSkill(animal));
         }
-
     }
-
-
 }

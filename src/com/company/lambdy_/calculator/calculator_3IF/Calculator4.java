@@ -8,7 +8,7 @@ Every method has own class.
 public class Calculator4 {
     public static void main(String[] args) {
 
-        // 1. Obiektami
+        // 1. By creating objects:
         IntegerMath addition = new Addition();
         IntegerMath subtraction = new Subtraction();
         IntegerMath divide = new Divide();
@@ -17,7 +17,7 @@ public class Calculator4 {
         calculate(50,2,subtraction);
         calculate(100,2,divide);
 
-        // 2. LUB LAMBDAMI
+        // 2. Or with lambda:
         System.out.println("LAMBDAS");
         calculate(5,10,(a,b) -> a+b); //etc
 

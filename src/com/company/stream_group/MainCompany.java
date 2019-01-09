@@ -27,7 +27,6 @@ public class MainCompany {
                 .collect(Collectors.groupingBy((Employee e)->e.getCompany()));
 
         groupByCompany.forEach((company, e) ->
-
             System.out.println(e.toString()));
 
     }

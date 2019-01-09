@@ -39,6 +39,5 @@ public class PersonSort {
         );
 
         people.forEach((arg1) -> System.out.println(arg1));
-
     }
 }

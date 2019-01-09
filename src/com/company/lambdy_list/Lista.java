@@ -14,6 +14,7 @@ public class Lista {
         elements.add(5);
         elements.add(10);
         elements.add(20);
+
         MyArray.map(elements,(a)->a+5);
     }
 }

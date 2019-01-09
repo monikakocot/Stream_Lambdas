@@ -41,6 +41,5 @@ public class MainMap {
                 .map(s -> s.toString().toUpperCase())
                 .sorted()
                 .forEach(System.out::println);
-
     }
 }

@@ -8,7 +8,7 @@ public class Calculator2 {
     public static void main(String[] args) {
 
         IntegerMathMy addition = (a,b) -> a+b;
-        IntegerMathMy subtraction = (a,b) -> a-+b;
+        IntegerMathMy subtraction = (a,b) -> a-b;
         IntegerMathMy divide = (a,b) -> {
             if(b == 0){
                 throw new IllegalArgumentException("DO NOT divide by zero");

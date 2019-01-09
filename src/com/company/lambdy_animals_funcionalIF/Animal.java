@@ -14,6 +14,8 @@ public class Animal {
         this.canJump = canJump;
     }
 
+
+    //GETTERS, SETTERS
     public String getName() {
         return name;
     }

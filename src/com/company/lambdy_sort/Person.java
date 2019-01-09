@@ -5,6 +5,10 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+/*
+Here example of using lambda expression with Streams
+ */
+
 public class Person {
 
     private String firstName, lastName, job, gender;

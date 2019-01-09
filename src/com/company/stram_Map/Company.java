@@ -10,6 +10,7 @@ public class Company {
         this.city = city;
     }
 
+    // SETTERS, GETTERS
 
     public String getName() {
         return name;

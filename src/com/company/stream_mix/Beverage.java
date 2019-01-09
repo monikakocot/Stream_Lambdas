@@ -13,6 +13,7 @@ public class Beverage {
         this.price = price;
     }
 
+    //GETTERS, SETTERS
     public String getName() {
         return name;
     }

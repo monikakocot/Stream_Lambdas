@@ -232,8 +232,8 @@ public class Person {
         System.out.println("Calculate total money spent for paying Java programmers:");
         int totalSalary = javaProgrammers
                 .parallelStream()
-                .mapToInt(p -> p.getSalary())
-                .sum();
+                .mapToInt(p -> p.getSalary()).sum();
+
         System.out.println(totalSalary);
 
 //Get count, min, max, sum, and average for numbers

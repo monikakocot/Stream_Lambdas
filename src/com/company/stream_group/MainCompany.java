@@ -22,6 +22,7 @@ public class MainCompany {
         employeeList.add(new Employee("Michal", "Makaruk", "Akademia Kodu"));
 
     Map<String, List<Employee>> groupByCompany;
+
         groupByCompany = employeeList
                 .stream()
                 .collect(Collectors.groupingBy((Employee e)->e.getCompany()));
